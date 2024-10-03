@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"name": "@artplayer/plugin-vtt-thumbnail",
 	"description": "vtt thumbnail plugin for ArtPlayer",
 	"publishConfig": {
@@ -27,7 +27,11 @@
 	"bugs": {
 		"url": "https://github.com/divyam234/ArtPlayer/issues"
 	},
-	"keywords": ["html5", "video", "player"],
+	"keywords": [
+		"html5",
+		"video",
+		"player"
+	],
 	"scripts": {
 		"build": "tsup"
 	},

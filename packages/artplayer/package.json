@@ -1,7 +1,7 @@
 {
 	"license": "MIT",
 	"name": "@artplayer/player",
-	"version": "5.1.12",
+	"version": "5.1.13",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -18,7 +18,9 @@
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"homepage": "https://artplayer.org",
 	"browserslist": "last 1 Chrome version",
 	"description": "ArtPlayer.js is a modern and full featured HTML5 video player",
@@ -29,7 +31,11 @@
 	"bugs": {
 		"url": "https://github.com/divyam234/ArtPlayer/issues"
 	},
-	"keywords": ["html5", "video", "player"],
+	"keywords": [
+		"html5",
+		"video",
+		"player"
+	],
 	"scripts": {
 		"build": "tsup",
 		"publish": "pnpm publish --access public --no-git-checks"
