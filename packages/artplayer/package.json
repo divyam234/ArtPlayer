@@ -37,8 +37,7 @@
 		"player"
 	],
 	"scripts": {
-		"build": "tsup",
-		"publish": "pnpm publish --access public --no-git-checks"
+		"build": "tsup"
 	},
 	"devDependencies": {
 		"esbuild-plugin-less": "^1.3.10",
