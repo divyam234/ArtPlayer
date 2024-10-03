@@ -1,27 +1,43 @@
 {
     "license": "MIT",
-    "name": "artplayer",
+    "name": "@artplayer/player",
     "version": "5.1.7",
-    "main": "dist/artplayer.js",
-    "legacy": "dist/artplayer.legacy.js",
+    "sideEffects": false,
+    "exports": {
+        "./package.json": "./package.json",
+        "./artplayer.css": "./dist/artplayer.css",
+        ".": {
+          "types": "./types/artplayer.d.ts",
+          "module": "./dist/index.js",
+          "import": "./dist/index.mjs",
+          "default": "./dist/index.js"
+        }
+      },
+    "main": "dist/index.js",
     "types": "types/artplayer.d.ts",
+    "files": ["dist","types"],
     "homepage": "https://artplayer.org",
-    "author": "Harvey Zack <laozhaochaguan@gmail.com>",
     "browserslist": "last 1 Chrome version",
     "description": "ArtPlayer.js is a modern and full featured HTML5 video player",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/zhw2590582/ArtPlayer.git"
+        "url": "git+https://github.com/divyam234/ArtPlayer"
     },
     "bugs": {
-        "url": "https://github.com/zhw2590582/ArtPlayer/issues"
+        "url": "https://github.com/divyam234/ArtPlayer/issues"
     },
     "keywords": [
         "html5",
         "video",
         "player"
     ],
-    "dependencies": {
+    "scripts": {
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "esbuild-plugin-less": "^1.3.10",
+        "svgo": "^3.3.2",
+        "tsup": "^8.3.0",
         "option-validator": "^2.0.6"
     }
 }

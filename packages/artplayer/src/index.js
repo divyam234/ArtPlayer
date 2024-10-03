@@ -1,4 +1,3 @@
-import style from 'bundle-text:./style/index.less';
 import validator from 'option-validator';
 import Emitter from './utils/emitter';
 import * as utils from './utils';
@@ -250,17 +249,4 @@ Artplayer.USE_RAF = false;
 
 if (utils.isBrowser) {
     window['Artplayer'] = Artplayer;
-
-    utils.setStyleText('artplayer-style', style);
-
-    setTimeout(() => {
-        if (Artplayer.LOG_VERSION) {
-            console.log(
-                `%c ArtPlayer %c ${Artplayer.version} %c https://artplayer.org`,
-                'color: #fff; background: #5f5f5f',
-                'color: #fff; background: #4bc729',
-                '',
-            );
-        }
-    }, 100);
 }

@@ -4,9 +4,6 @@
     "type": "module",
     "private": true,
     "description": "ArtPlayer.js is a modern and full featured HTML5 video player",
-    "workspaces": [
-        "packages/*"
-    ],
     "scripts": {
         "build:all": "npm run build all && npm run build:i18n && npm run build:sw && npm run build:ts && npm run build:docs",
         "lint": "npx eslint packages/*/src --fix",
@@ -19,7 +16,6 @@
         "dev": "npx cross-env NODE_ENV=development node ./scripts/dev.js",
         "build": "npx cross-env NODE_ENV=production node ./scripts/build.js",
         "prettier": "npx prettier --write .",
-        "postinstall": "npx lerna run prepare",
         "bootstrap": "npx lerna link"
     },
     "repository": {
@@ -38,12 +34,6 @@
     "homepage": "https://artplayer.org",
     "browserslist": "last 1 Chrome version",
     "dependencies": {
-        "@parcel/config-default": "^2.12.0",
-        "@parcel/core": "^2.12.0",
-        "@parcel/optimizer-data-url": "^2.12.0",
-        "@parcel/reporter-cli": "^2.12.0",
-        "@parcel/transformer-inline-string": "^2.12.0",
-        "@parcel/transformer-less": "^2.12.0",
         "axios": "^1.7.2",
         "cpy": "^11.0.1",
         "cross-env": "^7.0.3",
@@ -52,7 +42,6 @@
         "eslint": "^9.6.0",
         "glob": "^11.0.0",
         "globals": "^15.8.0",
-        "lerna": "^8.1.5",
         "prettier": "^3.3.2",
         "prompts": "^2.4.2",
         "servor": "^4.0.2",
