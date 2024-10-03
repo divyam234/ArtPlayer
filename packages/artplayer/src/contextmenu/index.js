@@ -4,7 +4,6 @@ import playbackRate from './playbackRate';
 import aspectRatio from './aspectRatio';
 import flip from './flip';
 import info from './info';
-import version from './version';
 import close from './close';
 
 export default class Contextmenu extends Component {
@@ -59,14 +58,6 @@ export default class Contextmenu extends Component {
                 index: 40,
             }),
         );
-
-        this.add(
-            version({
-                name: 'version',
-                index: 50,
-            }),
-        );
-
         this.add(
             close({
                 name: 'close',

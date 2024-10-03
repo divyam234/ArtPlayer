@@ -1,4 +1,3 @@
-import style from 'bundle-text:./style/index.less';
 import validator from 'option-validator';
 import Emitter from './utils/emitter';
 import * as utils from './utils';
@@ -24,7 +23,7 @@ import Plugins from './plugins';
 
 let id = 0;
 const instances = [];
-export default class Artplayer extends Emitter {
+export  class Artplayer extends Emitter {
     constructor(option, readyCallback) {
         super();
 
@@ -62,16 +61,6 @@ export default class Artplayer extends Emitter {
 
         if (typeof readyCallback === 'function') {
             this.on('ready', () => readyCallback.call(this, this));
-        }
-
-        if (Artplayer.DEBUG) {
-            const log = (msg) => console.log(`[ART.${this.id}] -> ${msg}`);
-            log('Version@' + Artplayer.version);
-            log('Env@' + Artplayer.env);
-            log('Build@' + Artplayer.build);
-            for (let index = 0; index < config.events.length; index++) {
-                this.on('video:' + config.events[index], (event) => log('Event@' + event.type));
-            }
         }
 
         instances.push(this);
@@ -128,7 +117,6 @@ export default class Artplayer extends Emitter {
             url: '',
             poster: '',
             type: '',
-            theme: '#f00',
             volume: 0.7,
             isLive: false,
             muted: false,
@@ -213,9 +201,6 @@ export default class Artplayer extends Emitter {
         this.emit('destroy');
     }
 }
-
-Artplayer.STYLE = style;
-Artplayer.DEBUG = false;
 Artplayer.CONTEXTMENU = true;
 Artplayer.NOTICE_TIME = 2000;
 Artplayer.SETTING_WIDTH = 250;
@@ -250,17 +235,4 @@ Artplayer.USE_RAF = false;
 
 if (utils.isBrowser) {
     window['Artplayer'] = Artplayer;
-
-    utils.setStyleText('artplayer-style', style);
-
-    setTimeout(() => {
-        if (Artplayer.LOG_VERSION) {
-            console.log(
-                `%c ArtPlayer %c ${Artplayer.version} %c https://artplayer.org`,
-                'color: #fff; background: #5f5f5f',
-                'color: #fff; background: #4bc729',
-                '',
-            );
-        }
-    }, 100);
 }

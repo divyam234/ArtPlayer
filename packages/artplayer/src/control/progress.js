@@ -53,8 +53,6 @@ export default function progress(options) {
 
                 if (icons.indicator) {
                     append($indicator, icons.indicator);
-                } else {
-                    setStyle($indicator, 'backgroundColor', 'var(--art-theme)');
                 }
 
                 function showHighlight(event) {

@@ -39,7 +39,6 @@ export default {
     url: s,
     poster: s,
     type: s,
-    theme: s,
     lang: s,
     volume: n,
     isLive: b,
