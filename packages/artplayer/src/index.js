@@ -23,7 +23,7 @@ import Plugins from './plugins';
 
 let id = 0;
 const instances = [];
-export default class Artplayer extends Emitter {
+export  class Artplayer extends Emitter {
     constructor(option, readyCallback) {
         super();
 
@@ -61,16 +61,6 @@ export default class Artplayer extends Emitter {
 
         if (typeof readyCallback === 'function') {
             this.on('ready', () => readyCallback.call(this, this));
-        }
-
-        if (Artplayer.DEBUG) {
-            const log = (msg) => console.log(`[ART.${this.id}] -> ${msg}`);
-            log('Version@' + Artplayer.version);
-            log('Env@' + Artplayer.env);
-            log('Build@' + Artplayer.build);
-            for (let index = 0; index < config.events.length; index++) {
-                this.on('video:' + config.events[index], (event) => log('Event@' + event.type));
-            }
         }
 
         instances.push(this);
@@ -212,9 +202,6 @@ export default class Artplayer extends Emitter {
         this.emit('destroy');
     }
 }
-
-Artplayer.STYLE = style;
-Artplayer.DEBUG = false;
 Artplayer.CONTEXTMENU = true;
 Artplayer.NOTICE_TIME = 2000;
 Artplayer.SETTING_WIDTH = 250;
