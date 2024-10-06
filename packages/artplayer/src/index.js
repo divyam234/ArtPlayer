@@ -117,7 +117,6 @@ export  class Artplayer extends Emitter {
             url: '',
             poster: '',
             type: '',
-            theme: '#f00',
             volume: 0.7,
             isLive: false,
             muted: false,

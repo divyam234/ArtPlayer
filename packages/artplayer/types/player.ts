@@ -57,8 +57,6 @@ export declare class Player {
     set muted(state: boolean);
     get title(): string;
     set title(title: string);
-    get theme(): string;
-    set theme(theme: string);
     get subtitleOffset(): number;
     set subtitleOffset(time: number);
     set switch(url: string);

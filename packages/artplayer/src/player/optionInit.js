@@ -36,11 +36,7 @@ export default function attrInit(art) {
         $video.playsInline = true;
         $video['webkit-playsinline'] = true;
     }
-
-    if (option.theme) {
-        option.cssVar['--art-theme'] = option.theme;
-    }
-
+    
     for (const key in option.cssVar) {
         art.cssVar(key, option.cssVar[key]);
     }

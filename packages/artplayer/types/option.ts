@@ -66,12 +66,7 @@ export type Option = {
      * Video url type
      */
     type?: CustomType;
-
-    /**
-     * Player color theme
-     */
-    theme?: string;
-
+    
     /**
      * Player language
      */

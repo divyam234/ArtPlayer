@@ -19,23 +19,27 @@
                 width: 100%;
                 transition: height var(--art-transition-duration) ease;
                 background-color: var(--art-progress-color);
+                border-radius: var(--art-progress-radius);
 
                 .art-progress-hover {
                     .art-full(0);
                     width: 0%;
                     background-color: var(--art-hover-color);
+                    border-radius: var(--art-progress-radius);
                 }
 
                 .art-progress-loaded {
                     .art-full(10);
                     width: 0%;
                     background-color: var(--art-loaded-color);
+                    border-radius: var(--art-progress-radius);
                 }
 
                 .art-progress-played {
                     .art-full(20);
                     width: 0%;
                     background-color: var(--art-theme);
+                    border-radius: var(--art-progress-radius);
                 }
 
                 .art-progress-highlight {
@@ -63,6 +67,7 @@
                     transform: scale(var(--art-indicator-scale));
                     margin-left: calc(var(--art-indicator-size) / -2);
                     transition: transform var(--art-transition-duration) ease;
+                    background-color: var(--art-progress-indicator-color);
 
                     .art-icon {
                         width: 100%;
