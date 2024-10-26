@@ -1,4 +1,12 @@
-export default function artplayerPluginAmbilight(option = {}) {
+type Option = {
+    blur: string;
+    opacity: number;
+    frequency: number;
+    zIndex: number;
+    duration: number;
+};
+
+export default function artplayerPluginAmbilight(option:Option) {
     return (art) => {
         const { $video } = art.template;
         const { createElement, addClass, setStyles } = art.constructor.utils;
@@ -12,7 +20,7 @@ export default function artplayerPluginAmbilight(option = {}) {
 
         const updateColors = createColorUpdater($video, gridItems, frequency);
 
-        let animationFrameId = null;
+        let animationFrameId:number |null = null;
 
         function start() {
             if (!animationFrameId) {
@@ -112,8 +120,4 @@ export default function artplayerPluginAmbilight(option = {}) {
             };
         }
     };
-}
-
-if (typeof window !== 'undefined') {
-    window['artplayerPluginAmbilight'] = artplayerPluginAmbilight;
 }

@@ -1,8 +1,8 @@
 {
 	"license": "MIT",
-	"version": "1.0.5",
-	"name": "@artplayer/plugin-vtt-thumbnail",
-	"description": "vtt thumbnail plugin for ArtPlayer",
+	"version": "1.0.1",
+	"name": "@artplayer/plugin-ambilight",
+	"description": "ambilight plugin for ArtPlayer",
 	"publishConfig": {
 		"access": "public"
 	},

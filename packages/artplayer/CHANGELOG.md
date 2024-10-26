@@ -1,5 +1,11 @@
 # @artplayer/player
 
+## 5.2.0
+
+### Minor Changes
+
+-   5a64a1e: update
+
 ## 5.1.14
 
 ### Patch Changes
